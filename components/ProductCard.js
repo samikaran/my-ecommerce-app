@@ -1,13 +1,16 @@
-import React from 'react'
+import React from "react"
 import ProductImage1 from "@/public/images/products/1.jpg"
+import Image from "next/image"
 
 const ProductCard = ({ product }) => {
     console.log(product)
     return (
         <div className="group relative">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                <img
+                <Image
                     src={product.images[0].src}
+                    width={500}
+                    height={500}
                     alt={product.title}
                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />

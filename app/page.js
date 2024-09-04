@@ -1,19 +1,4 @@
-// import React, { useEffect, useState } from 'react';
-// import ProductCard from "@/components/ProductCard";
-// import { fetchProducts } from "@/lib/shopify";
-import ProductListing from "@/components/ProductListing";
-
-// export async function getStaticProps() {
-//   const products = await getProducts();
-//   console.log(products);
-//   return {
-//     props: {
-//       products,
-//     },
-//   };
-// }
-// console.log(getProducts);
-// import { getProducts } from "@/lib/shopify";
+import ProductListing from "@/components/ProductListing"
 
 
 export default function Home() {
