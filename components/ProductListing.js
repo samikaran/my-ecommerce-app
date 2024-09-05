@@ -4,32 +4,30 @@ import ProductCard from "@/components/ProductCard"
 import { getProducts } from "@/lib/shopify"
 
 const Home = () => {
-    const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([])
 
-    useEffect(() => {
-        const fetchProductData
-            = async () => {
-                try {
-                    const data = await getProducts()
-                    setProducts(data)
-                } catch (error) {
-                    console.error('Error fetching products:',
-                        error)
-                }
-            };
+  useEffect(() => {
+    const fetchProductData = async () => {
+      try {
+        const data = await getProducts()
+        setProducts(data)
+      } catch (error) {
+        console.error("Error fetching products:", error)
+      }
+    }
 
-        fetchProductData()
-    }, []);
-    // console.log(products);
-    // console.log(process.env.SHOPIFY_STORE_URL);
+    fetchProductData()
+  }, [])
+  // console.log(products);
+  // console.log(process.env.SHOPIFY_STORE_URL);
 
-    return (
-        <>
-            {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
-            ))}
-        </>
-    )
+  return (
+    <>
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+    </>
+  )
 }
 
 export default Home
